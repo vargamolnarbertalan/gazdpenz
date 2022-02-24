@@ -1,0 +1,11 @@
+> x = c(1,2,3,4,5)
+> osszeg = function(x){
++ s = 0
++ for(i in 1:5)
++ s = s + x[i]
++ s}
+> osszeg(x)
+[1] 15
+> y = c(-2,-1,0,10,20)
+> osszeg(y)
+[1] 27

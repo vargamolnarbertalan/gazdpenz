@@ -1,0 +1,48 @@
+> x = c(10,20,30,40,50)
+> emp(x)
+Error in emp(x) : could not find function "emp"
+> clear
+Error: object 'clear' not found
+> emp = function(x){
++ s=0
++ for(i in 1:length(x)){
++ s = s + x[i]}
++ s}
+> emp(x)
+[1] 150
+> emp = function(x){
++ s = 0
++ for(i in 1:length(x)){
++ s = s + x[i]}
++ s=s/length(x)
++ s}
+> emp(x)
+[1] 30
+> szoras_negyzet = function(x){
++ s = 0
++ for(i in 1:length(x)){
++ s = s + (x[i] - emp(x))*(x[i] - emp(x))}
++ s}
+> szoras_negyzet(x)
+[1] 1000
+> emcsillag_xy = fuction(x){
+Error: unexpected '{' in "emcsillag_xy = fuction(x){"
+> m = function(x,y){
++ s = 0
++ for(i in 1:length(x)){
++ s=s+(x[i]-emp(x))*(y[i]-emp(y))}
++ s}
+> y = c(1,2,3,4,5)
+> m(x,y)
+[1] 100
+> print(s/length(x))
+Error in print(s/length(x)) : object 's' not found
+> m = function(x,y){
++ s=0
++ for(i in 1:length(x)){
++ s = s + (x[i]-emp(x))*(y[i]-emp(y))}
++ print(s/(length(x)-1))}
+> m(x,y)
+[1] 25
+> m(y,x)
+[1] 25
